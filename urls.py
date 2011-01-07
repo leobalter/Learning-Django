@@ -5,6 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+	(r'^$', 'core.views.index'),
 	(r'^dicas/', include('posts.urls')),
 	(r'^admin/', include(admin.site.urls)),
 )
