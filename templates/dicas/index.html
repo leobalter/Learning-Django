@@ -1,9 +1,0 @@
-{% if lista_ultimos_artigos %}
-    <ul>
-    {% for artigo in lista_ultimos_artigos %}
-        <li><a href="/dicas/{{ artigo.id }}/">{{ artigo.titulo }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>Nenhuma dica, ainda.</p>
-{% endif %}
