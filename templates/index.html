@@ -38,23 +38,23 @@
     <div id="main" class="main">
         {% block main %}
             <h2>Olá mundo</h2>
+
+			<p>Como diz a descrição desse site, sou um cara apaixonado por web. Esse site ainda é apenas um experimento com tecnologias que curto.</p>
         {% endblock %}
     </div>
     
     {% block footer %}
 	    <footer class="main">
-            <h2>Ficha técnica:</h2>
-
 			<section class="hCard" 
 				itemtype="http://microformats.org/profile/hcard" itemscope>
 				<h3 itemprop="fn">Leonardo Balter</h3>
-				<p><span itemprop="title">Desenvolvedor Web</span> na <span itemprop="org">Personare</span> (<a href="http://www.personare.com.br" target="_blank">http://www.personare.com.br</a>)</p>
+				<p><span itemprop="title">Desenvolvedor Web</span> na <span itemprop="org" itemscope itemtype="http://data-vocabulary.org/Organization"><strong itemprop="name">Personare<strong> (<a itemprop="url" href="http://www.personare.com.br" target="_blank">http://www.personare.com.br</a>)</span></p>
 				<p itemprop="email">leo@balter.com.br<p>
 				<div itemprop="adr" itemscope>
 					<p itemprop="locality">Rio de Janeiro</p>
 				</div>
 				<h4>Pela web:</h4>
-				<ul>
+				<ul class="linear clearfix">
 					<li><a href="http://www.iloop.com.br/" itemprop="url">site</a></li>
 					<li><a href="http://leobalter.net" itemprop="url">blog técnico</a></li>
 					<li><a href="http://www.desconferencia.com.br" itemprop="url">blog de idéias</a></li>

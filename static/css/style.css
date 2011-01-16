@@ -148,7 +148,14 @@ header .description{
     margin:0px 0px 10px 0px
 }
 
+ul.linear {
+	list-style: none;
+}
 
+ul.linear li {
+	float: left;
+	padding: 6px;
+}
 
 @media all and (orientation:portrait) { 
   
