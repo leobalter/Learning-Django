@@ -7,8 +7,8 @@ from django.http import Http404
 
 def index(request):
 	lista_ultimos_artigos = Artigo.objects.all().order_by('-publicacao')[:5]
-	return render_to_response('dicas/index.html', {'lista_ultimos_artigos': lista_ultimos_artigos})
+	return render_to_response('posts/index.html', {'lista_ultimos_artigos': lista_ultimos_artigos})
 	
 def detail(request, post_id):
 	d = get_object_or_404(Artigo, pk=post_id)
-	return render_to_response('dicas/detail.html', {'dica': d})
+	return render_to_response('posts/detail.html', {'artigo': d})
