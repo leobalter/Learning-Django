@@ -19,6 +19,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+  <link href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css?v=2">
   <script src="{{ STATIC_URL }}js/libs/modernizr-1.6.min.js"></script>
 
@@ -29,21 +30,40 @@
   <div id="container">
     <header>
         {% block header %}
-            Olá mundo
+            <h1>Leo Balter</h1>
+			<p class="description">um cara apaixonado por web</p>
         {% endblock %}
     </header>
     
     <div id="main" class="main">
         {% block main %}
-            main area
+            <h2>Olá mundo</h2>
         {% endblock %}
     </div>
     
-    <footer class="main">
-        {% block footer %}
-            footer
-        {% endblock %}
-    </footer>
+    {% block footer %}
+	    <footer class="main">
+            <h2>Ficha técnica:</h2>
+
+			<section class="hCard" 
+				itemtype="http://microformats.org/profile/hcard" itemscope>
+				<h3 itemprop="fn">Leonardo Balter</h3>
+				<p><span itemprop="title">Desenvolvedor Web</span> na <span itemprop="org">Personare</span> (<a href="http://www.personare.com.br" target="_blank">http://www.personare.com.br</a>)</p>
+				<p itemprop="email">leo@balter.com.br<p>
+				<div itemprop="adr" itemscope>
+					<p itemprop="locality">Rio de Janeiro</p>
+				</div>
+				<h4>Pela web:</h4>
+				<ul>
+					<li><a href="http://www.iloop.com.br/" itemprop="url">site</a></li>
+					<li><a href="http://leobalter.net" itemprop="url">blog técnico</a></li>
+					<li><a href="http://www.desconferencia.com.br" itemprop="url">blog de idéias</a></li>
+					<li><a href="http://twitter.com/leobalter" itemprop="url">twitter</a></li>
+					<li><a href="http://facebook.com/leonardo.balter" itemprop="url">facebook</a></li>
+				</ul>	
+			</section>
+	    </footer>
+	{% endblock %}
   </div> <!-- end of #container -->
 
 
